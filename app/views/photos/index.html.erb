@@ -1,8 +1,10 @@
 <h1>This is our Photo Gallery Website</h1>
-<%= link_to "Add a New Photo" , new_photo_path %>
+<h3> Add New Photos , And Explore The Website for more photos. </h3>
+<p><%= link_to "Add a New Photo" , new_photo_path %> || <%= link_to "View By category" , categories_path %> </p>
 
 <% @photos.each do |photo| %>
-  <h2><%= link_to photo.title, photo %></h2>
-    <%= image_tag url_for(photo.image)%>
-  <p><%= photo.user %></p>
+  <h2><%= link_to photo.title, photo %> ( Created By: <%= photo.user %> || Category : <%= link_to photo.category.name,category_path(photo.category)  %> )</h2>
+    <%= link_to image_tag(url_for(photo.image), :size => "260x180"), photo %>
+
+
 <% end %>

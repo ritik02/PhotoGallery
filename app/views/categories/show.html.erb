@@ -1,11 +1,14 @@
 <h1><%= @category.name %></h1>
+<p><%= link_to "Back" , categories_path %> </p>
 <br>
 <% if @photos.each do |photo| %>
- <h3> <%= link_to photo.title,photo %> </h3>
- <p>  <%= photo.user %> </p>
- <%= image_tag url_for(photo.image) %>
+ <h3> <%= link_to photo.title,photo %> || Created By: <%= photo.user %></h3>
+
+ <%= image_tag(url_for(photo.image), :size => "300x200") %>
+  <hr>
  <% end.empty? %>
- <p> Sorry,there are no Photos for this Category </p>
- <hr>
+ <p> Sorry,there are no Photos for th is Category </p>
+
 <% end %>
-<p> <%= link_to 'Back' , categories_path %> </p>
+<p>
+<hr>
