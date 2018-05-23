@@ -37,6 +37,13 @@ class PhotosController < ApplicationController
 
  end
 
+
+  def destroy
+    @photo = Photo.find(params[:id])
+    @photo.destroy
+    redirect_to photos_path, :notice => "Your Photo has been removed from the gallery"
+  end
+
   private
     def photo_params
       params.require(:photo).permit(:title, :user, :category_id,:image)

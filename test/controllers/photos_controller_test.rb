@@ -35,7 +35,14 @@ class PhotosControllerTest < ActionDispatch::IntegrationTest
    assert_response :success
   end
 
+  test "should delete Photo Post on photos#destroy" do
+   assert_difference('Photo.count', -1) do
+     delete photo_path(@photo)
+   end
+   assert_redirected_to photos_url
+ end
 
-  
+
+
 
 end

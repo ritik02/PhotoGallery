@@ -2,7 +2,7 @@
 <%= link_to "Add a New Photo" , new_photo_path %>
 
 <% @photos.each do |photo| %>
-  <h2><%= photo.title %></h2>
-    <%= image_tag url_for(photo.image) %>
+  <h2><%= link_to photo.title, photo %></h2>
+    <%= image_tag url_for(photo.image)%>
   <p><%= photo.user %></p>
 <% end %>

@@ -14,14 +14,14 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-23T18:34:39+05:30">2018-05-23T18:34:39+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-23T18:42:19+05:30">2018-05-23T18:42:19+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.4%</span></span>
+    (<span class="covered_percent"><span class="green">99.43%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>19</b> files in total.
-    <b>167</b> relevant lines. 
-    <span class="green"><b>166</b> lines covered</span> and
+    <b>175</b> relevant lines. 
+    <span class="green"><b>174</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -72,10 +72,10 @@
       
       <tr>
         <td class="strong"><a href="#36c77bd7ad96105c75d7a348803d9d3d1d53da11" class="src_link" title="app/controllers/photos_controller.rb">app/controllers/photos_controller.rb</a></td>
-        <td class="green strong">95.83 %</td>
-        <td>45</td>
-        <td>24</td>
-        <td>23</td>
+        <td class="green strong">96.43 %</td>
+        <td>52</td>
+        <td>28</td>
+        <td>27</td>
         <td>1</td>
         <td>1.5</td>
       </tr>
@@ -193,9 +193,9 @@
       <tr>
         <td class="strong"><a href="#fa2ee538102da28afeb487dc6162e6beafee9c79" class="src_link" title="test/controllers/photos_controller_test.rb">test/controllers/photos_controller_test.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>41</td>
-        <td>20</td>
-        <td>20</td>
+        <td>48</td>
+        <td>24</td>
+        <td>24</td>
         <td>0</td>
         <td>1.3</td>
       </tr>
@@ -363,10 +363,10 @@
         <div class="source_table" id="36c77bd7ad96105c75d7a348803d9d3d1d53da11">
   <div class="header">
     <h3>app/controllers/photos_controller.rb</h3>
-    <h4><span class="green">95.83 %</span> covered</h4>
+    <h4><span class="green">96.43 %</span> covered</h4>
     <div>
-      <b>24</b> relevant lines. 
-      <span class="green"><b>23</b> lines covered</span> and
+      <b>28</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -608,37 +608,79 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    def photo_params</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="42">
-          <span class="hits">4</span>
-          
-          <code class="ruby">      params.require(:photo).permit(:title, :user, :category_id,:image)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @photo = Photo.find(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @photo.destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    redirect_to photos_path, :notice =&gt; &quot;Your Photo has been removed from the gallery&quot;</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def photo_params</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="49">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      params.require(:photo).permit(:title, :user, :category_id,:image)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">end</code>
@@ -1283,8 +1325,8 @@
     <h3>test/controllers/photos_controller_test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>24</b> relevant lines. 
+      <span class="green"><b>24</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1322,14 +1364,14 @@
           <code class="ruby"> setup do</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
           <code class="ruby">   @photo = photos(:photo_one)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="7">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="7">
+          <span class="hits">5</span>
           
           <code class="ruby">   @photo.image.attach(io: File.open(&quot;/Users/ritikverma/Desktop/photogallery/test/fixtures/files/test.jpg&quot;), filename: &quot;test.jpg&quot;, content_type: &quot;image/jpg&quot;)</code>
         </li>
@@ -1514,25 +1556,67 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  test &quot;should delete Photo Post on photos#destroy&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  </code>
+          <code class="ruby">   assert_difference(&#39;Photo.count&#39;, -1) do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">     delete photo_path(@photo)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
+          
+          <code class="ruby">   assert_redirected_to photos_url</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"> end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">end</code>

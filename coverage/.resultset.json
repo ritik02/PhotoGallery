@@ -81,8 +81,8 @@
         1,
         null,
         1,
-        4,
-        4,
+        5,
+        5,
         null,
         null,
         1,
@@ -106,6 +106,13 @@
         null,
         null,
         1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -274,21 +281,6 @@
         1,
         null
       ],
-      "/Users/ritikverma/Desktop/photogallery/app/controllers/categories_controller.rb": [
-        1,
-        1,
-        2,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/ritikverma/Desktop/photogallery/app/controllers/application_controller.rb": [
-        1,
-        null
-      ],
       "/Users/ritikverma/Desktop/photogallery/app/controllers/photos_controller.rb": [
         1,
         1,
@@ -329,14 +321,36 @@
         null,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         4,
         null,
         null,
         null
+      ],
+      "/Users/ritikverma/Desktop/photogallery/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/ritikverma/Desktop/photogallery/app/controllers/categories_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1527080679
+    "timestamp": 1527081139
   }
 }
