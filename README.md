@@ -3,6 +3,7 @@ This is a PhotoGallery Web Application implemented on Ruby on Rails.
 OVERVIEW
 
 This is a PhotoGallery web application implemented on Ruby on Rails in which anyone can post photos and view photos present in the database . The photos are divide according to various categories like - Nature , Space, Car , Bike , Monument etc. Not only can the viewer view all the photos at once but also view them category-wise . Each photo will consist of -
+
 Image
 
 Title
@@ -23,8 +24,6 @@ STEPS TO FOLLOW -
 	"rails active_storage:install",
 
 	"rake db:migrate",
-
-	"rake db:seed",
 
 	"rails server",
 

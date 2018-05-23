@@ -13,23 +13,21 @@ class PhotosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    get photo_url(@photo)
+    photos(:photo_one).image.attach(io: File.open(Dir.pwd+"/test/fixtures/files/test.jpg"), filename: "test.jpg", content_type: "image/jpg")
+    get photo_url(photos(:photo_one))
     assert_response :success
   end
 
-
   test "should create new Photo" do
-    assert_difference('Photo.count') do
+    assert_difference('Photo.count', 1) do
      post photos_url, params: { photo: { title: @photo.title, user: @photo.user, category_id: @photo.category.id } }
     end
     assert_redirected_to photos_url
   end
 
-
-
- test "should not create a new Photo when incomplete params" do
+  test "should not create a new Photo when incomplete params" do
    @photo.user = nil
-   assert_difference('Photo.count',0) do
+   assert_difference('Photo.count', 0) do
     post photos_url, params: { photo: { title: @photo.title, user: @photo.user, category_id: @photo.category.id } }
    end
    assert_redirected_to new_photo_path
