@@ -7,7 +7,7 @@ class PhotoFlowTest < ActionDispatch::IntegrationTest
   end
 
   test "can create a Photo post" do
-    get "/photos/new"
+    get new_photo_path
     assert_response :success
 
     post "/photos",
@@ -18,5 +18,12 @@ class PhotoFlowTest < ActionDispatch::IntegrationTest
       assert_select "h2" ,"My Picture"
   end
 
-
+  test "should see a New Photo form on photo#new route" do
+    get new_photo_path
+    assert_select "form" do |elements|
+      elements.each do |element|
+        assert_select element, "input" , 3
+      end
+    end
+  end
 end
