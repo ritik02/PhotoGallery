@@ -3,5 +3,6 @@
 
 <% @photos.each do |photo| %>
   <h2><%= photo.title %></h2>
+    <%= image_tag url_for(photo.image) %>
   <p><%= photo.user %></p>
 <% end %>

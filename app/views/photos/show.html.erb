@@ -1,0 +1,9 @@
+<h1><%= @photo.title %></h1>
+<small> <%=  @photo.created_at.strftime("%b %d. %Y") %> </small>
+<p> <%= @photo.user %> </p>
+<p> Category: <%= link_to @photo.category.name,category_path(:id => @photo.category.id) %> </p>
+<%= link_to "Edit Post", edit_photo_path %> | <%= link_to "Delete", @photo, :method => :delete ,data: { confirm: 'Are you sure?' }%>
+
+<%= image_tag url_for(@photo.image) %>
+
+<p><%= link_to "Back" , photos_path %> </p>

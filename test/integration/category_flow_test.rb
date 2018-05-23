@@ -7,4 +7,6 @@ class CategoryFlowTest < ActionDispatch::IntegrationTest
     assert_select "h1" , "Categories"
   end
 
+  
+
 end

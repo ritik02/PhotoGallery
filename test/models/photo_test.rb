@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class PhotoTest < ActiveSupport::TestCase
+  setup do
+    @photo = photos(:photo_one)
+    @photo.image.attach(io: File.open("/Users/ritikverma/Desktop/photogallery/test/fixtures/files/test.jpg"), filename: "test.jpg", content_type: "image/jpg")
+  end
+
   test "should be invalid without Photo title" do
     photos(:photo_one).title = nil
     assert_nil photos(:photo_one).title
@@ -29,6 +34,11 @@ class PhotoTest < ActiveSupport::TestCase
 
   test "Photo Category_id should be an Integer" do
     assert_equal true, photos(:photo_one).category_id.is_a?(Integer)
+  end
+
+  test "Image should be attached" do
+    @photo.save!
+    assert_equal true, @photo.image.attached?
   end
 
 end
