@@ -10,4 +10,5 @@ class CategoryTest < ActiveSupport::TestCase
     assert_nil categories(:one).name
     assert_equal false, categories(:one).valid?
   end
+
 end
