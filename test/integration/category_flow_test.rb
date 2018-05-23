@@ -16,7 +16,7 @@ class CategoryFlowTest < ActionDispatch::IntegrationTest
     photos(:photo_one).image.attach(io: File.open(Dir.pwd+"/test/fixtures/files/test.jpg"), filename: "test.jpg", content_type: "image/jpg")
     get category_url(categories(:one))
     assert_select "h1" , "Nature"
-    assert_select "h3" , "BMW"
+    assert_select "h3" , "BMW || Created By: Ritik"
   end
 
 

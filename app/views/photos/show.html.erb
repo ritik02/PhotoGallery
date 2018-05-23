@@ -4,6 +4,4 @@
 <small> Uploaded On: <%=  @photo.created_at.strftime("%b %d. %Y") %> || Last Modified On: <%= @photo.updated_at.strftime("%b %d. %Y")%> </small>
 <p> Uploaded By: <%= @photo.user %> </p>
 <p> Category: <%= link_to @photo.category.name,category_path(:id => @photo.category.id) %> </p>
-
-
-  <%= image_tag(url_for(@photo.image), :size => "500x400")%>
+<%= image_tag(url_for(@photo.image), :size => "500x400")%>

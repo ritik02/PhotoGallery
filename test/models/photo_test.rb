@@ -2,8 +2,7 @@ require 'test_helper'
 
 class PhotoTest < ActiveSupport::TestCase
   setup do
-    @photo = photos(:photo_one)
-    @photo.image.attach(io: File.open(Dir.pwd+"/test/fixtures/files/test.jpg"), filename: "test.jpg", content_type: "image/jpg")
+    photos(:photo_one).image.attach(io: File.open(Dir.pwd+"/test/fixtures/files/test.jpg"), filename: "test.jpg", content_type: "image/jpg")
   end
 
   test "should be invalid without Photo title" do
@@ -37,8 +36,8 @@ class PhotoTest < ActiveSupport::TestCase
   end
 
   test "Image should be attached" do
-    @photo.save!
-    assert_equal true, @photo.image.attached?
+    photos(:photo_one).save!
+    assert_equal true, photos(:photo_one).image.attached?
   end
 
 end
