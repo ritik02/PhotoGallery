@@ -4,7 +4,7 @@ class PhotosControllerTest < ActionDispatch::IntegrationTest
 
  setup do
    @photo = photos(:photo_one)
-   @photo.image.attach(io: File.open("/Users/ritikverma/Desktop/photogallery/test/fixtures/files/test.jpg"), filename: "test.jpg", content_type: "image/jpg")
+   @photo.image.attach(io: File.open(Dir.pwd+"/test/fixtures/files/test.jpg"), filename: "test.jpg", content_type: "image/jpg")
  end
 
   test "should get index" do

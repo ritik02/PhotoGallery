@@ -13,7 +13,7 @@ class CategoryFlowTest < ActionDispatch::IntegrationTest
   end
 
   test "should go to categories#show and print photos of that category" do
-    photos(:photo_one).image.attach(io: File.open("/Users/ritikverma/Desktop/photogallery/test/fixtures/files/test.jpg"), filename: "test.jpg", content_type: "image/jpg")
+    photos(:photo_one).image.attach(io: File.open(Dir.pwd+"/test/fixtures/files/test.jpg"), filename: "test.jpg", content_type: "image/jpg")
     get category_url(categories(:one))
     assert_select "h1" , "Nature"
     assert_select "h3" , "BMW"
