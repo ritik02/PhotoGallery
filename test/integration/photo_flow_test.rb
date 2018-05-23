@@ -41,5 +41,20 @@ class PhotoFlowTest < ActionDispatch::IntegrationTest
      assert_response :success
   end
 
+  test "should show same post when clicked" do
+    get photo_url(@photo)
+    assert_response :success
+    assert_select "h1" ,"BMW"
+  end
+
+  test "should see a Edit Photo form on photo#edit route" do
+    get edit_photo_url(@photo)
+    assert_select "form" do |elements|
+      elements.each do |element|
+        assert_select element, "input" , 5
+      end
+    end
+  end
+
 
 end
