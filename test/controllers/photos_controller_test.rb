@@ -7,7 +7,7 @@ class PhotosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    get photo_url(photos(:one))
+    get photo_url(photos(:photo_one))
     assert_response :success
   end
 end

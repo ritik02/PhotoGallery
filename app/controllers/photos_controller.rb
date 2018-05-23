@@ -15,13 +15,13 @@ class PhotosController < ApplicationController
     if @photo.save
       redirect_to photos_path, :notice => "Your Photo has been added to the gallery"
     else
-      render 'new'
+      render new_photo_path
     end
   end
 
   private
     def photo_params
-      params.fetch(:photo).permit(:title, :user, :category_id)
+      params.require(:photo).permit(:title, :user, :category_id)
     end
 
 end

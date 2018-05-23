@@ -1,6 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
+photo_one:
   title: BMW
   user: Ritik
-  category_id: 1
+  category: one
