@@ -18,25 +18,24 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     begin
-      if @photo.save!
-        redirect_to photos_path, :notice => "Your Photo has been added to the gallery"
-      end
+      @photo.save!
+      redirect_to photos_path, :notice => "Your Photo has been added to the gallery"
     rescue
+      @photo.destroy
+      @photo.image.purge_later
       redirect_to new_photo_path
+    end
   end
-end
 
   def update
    @photo = Photo.find(params[:id])
    begin
-    if @photo.update!(photo_params)
-     redirect_to photo_path, :notice => "Your Photo Post has been updated"
-    end
+    @photo.update!(photo_params)
+    redirect_to photo_path, :notice => "Your Photo Post has been updated"
   rescue
     redirect_to edit_photo_path
   end
-
-  end
+ end
 
 
   def destroy
@@ -47,7 +46,7 @@ end
 
   private
     def photo_params
-      params.require(:photo).permit(:title, :user, :category_id,:image)
+      params.require(:photo).permit(:title, :user, :category_id, :image)
     end
 
 end

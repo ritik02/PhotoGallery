@@ -15,7 +15,7 @@ class PhotoFlowTest < ActionDispatch::IntegrationTest
     get new_photo_path
     assert_select "form" do |elements|
       elements.each do |element|
-        assert_select element, "input" , 4
+        assert_select element, "input" , 5
       end
     end
   end
@@ -41,7 +41,7 @@ class PhotoFlowTest < ActionDispatch::IntegrationTest
      assert_response :success
   end
 
-  test "should show same post when clicked" do
+  test "should show same photo post when clicked" do
     get photo_url(@photo)
     assert_response :success
     assert_select "h1" ,"BMW"

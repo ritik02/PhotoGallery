@@ -40,4 +40,13 @@ class PhotoTest < ActiveSupport::TestCase
     assert_equal true, photos(:photo_one).image.attached?
   end
 
+  test "Image should not be attached when invalid type" do
+    photos(:photo_one).image.attach(io: File.open(Dir.pwd+"/test/fixtures/files/test1.pdf"), filename: "test1.pdf", content_type: "application/pdf")
+    assert_raises "Error" do
+        photos(:photo_one).save!
+    end
+  end
+
+
+
 end

@@ -4,7 +4,10 @@
 
 <% @photos.each do |photo| %>
   <h2><%= link_to photo.title, photo %> ( Created By: <%= photo.user %> || Category : <%= link_to photo.category.name,category_path(photo.category)  %> )</h2>
+    <% if photo.image.attached? %>
     <%= link_to image_tag(url_for(photo.image), :size => "260x180"), photo %>
+    <% end %>
+
 
 
 <% end %>
