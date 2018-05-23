@@ -32,7 +32,7 @@ class PhotosControllerTest < ActionDispatch::IntegrationTest
    assert_difference('Photo.count',0) do
     post photos_url, params: { photo: { title: @photo.title, user: @photo.user, category_id: @photo.category.id } }
    end
-   assert_response :success
+   assert_redirected_to new_photo_path
   end
 
   test "should delete Photo Post on photos#destroy" do

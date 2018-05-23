@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <% flash.each do |k,v| %>
+      <marquee direction = "left" scrollamount="12"><h3> <%= v %> </h3> </marquee> 
+    <% end %>
     <%= yield %>
   </body>
 </html>

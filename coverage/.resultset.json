@@ -135,6 +135,17 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         null
@@ -294,6 +305,7 @@
         1,
         4,
         null,
+        null,
         1,
         3,
         null,
@@ -301,7 +313,9 @@
         1,
         2,
         2,
+        2,
         1,
+        null,
         null,
         1,
         null,
@@ -312,8 +326,6 @@
         2,
         2,
         1,
-        null,
-        0,
         null,
         null,
         1,
@@ -342,15 +354,16 @@
       "/Users/ritikverma/Desktop/photogallery/app/controllers/categories_controller.rb": [
         1,
         1,
+        3,
+        null,
+        null,
+        1,
         2,
-        null,
-        null,
-        1,
-        1,
+        2,
         null,
         null
       ]
     },
-    "timestamp": 1527081139
+    "timestamp": 1527083533
   }
 }

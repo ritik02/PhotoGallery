@@ -10,32 +10,33 @@ class PhotosController < ApplicationController
   def edit
     @photo = Photo.find(params[:id])
   end
+
   def show
     @photo = Photo.find(params[:id])
   end
 
   def create
     @photo = Photo.new(photo_params)
-    if @photo.save
-      redirect_to photos_path, :notice => "Your Photo has been added to the gallery"
-    else
-      render new_photo_path
-    end
+    begin
+      if @photo.save!
+        redirect_to photos_path, :notice => "Your Photo has been added to the gallery"
+      end
+    rescue
+      redirect_to new_photo_path
   end
+end
 
   def update
    @photo = Photo.find(params[:id])
    begin
-   if @photo.update!(photo_params)
+    if @photo.update!(photo_params)
      redirect_to photo_path, :notice => "Your Photo Post has been updated"
-   else
-     render "edit"
-   end
+    end
   rescue
     redirect_to edit_photo_path
   end
 
- end
+  end
 
 
   def destroy
