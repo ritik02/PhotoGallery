@@ -47,6 +47,15 @@ Home page also consists of “Add a new Photo” option which redirects the user
 
 Each of the pages would also include a “Back” button for moving to the previous page.
 
-Also the website consist of an “About” Page which can be viewed by clicking on About button on homepage .
+
+MODEL DESCRIPPTION -
+
+There are Basically two Models -
+
+1) Category - A Category "has many : Photos" , and has fields "Name".
+
+2) Photo - A Photo "belongs to one :Category" and has fields "Title, UserName, Category".
+
+Also the website prevents users from uploading any non-image type file or any invalid information other than acceptable .
 
 Have fun Enjoy !!
